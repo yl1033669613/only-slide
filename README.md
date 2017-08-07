@@ -69,7 +69,9 @@ export default {
 完成之后便可在template 中使用`only-slide`标签了
 <br>
 
-"<only-slide :option="slideOption" class="slide-part" style="margin: 0 auto"></only-slide>"
+```
+<only-slide :option="slideOption" class="slide-part" style="margin: 0 auto"></only-slide>
+```
 
 ## 效果图
 ![效果图](https://github.com/yl1033669613/vue_slide_component/raw/master/static/111.png)  
