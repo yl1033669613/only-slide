@@ -1,17 +1,108 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <hello></hello>
+    <only-slide :option="slideOption" class="slide-part"></only-slide>
+    <!-- <hello></hello> -->
   </div>
 </template>
 
 <script>
 import Hello from './components/Hello'
+import OnlySlide from './components/only_slide'
 
 export default {
   name: 'app',
   components: {
-    Hello
+    Hello,
+    OnlySlide
+  },
+  data (){
+    return {
+      slideOption:{
+        slideViewWidth: 1000,
+        slideViewHeight:500,
+        slideData:[
+          {
+            albumName:"setInterval",
+            photo:[
+              {
+                descr:"bbb",
+                img:"/static/head.png"
+              },
+              {
+                descr:"aaaaaa",
+                img:"/static/aaa.jpg"
+              },
+              {
+                descr:"是的是的",
+                img:"/static/aaa.jpg"
+              },
+              {
+                descr:"是的是的",
+                img:"/static/aaa.jpg"
+              },
+              {
+                descr:"是的是的",
+                img:"/static/head.png"
+              },
+              {
+                descr:"啊啊啊啊大撒啊啊啊啊大撒啊啊啊啊大撒啊啊啊啊大撒啊啊啊啊大撒啊啊啊啊",
+                img:"/static/aaa.jpg"
+              },
+              {
+                descr:"bbb",
+                img:"/static/head.png"
+              },
+              {
+                descr:"bbb",
+                img:"/static/aaa.jpg"
+              },
+              {
+                descr:"bbb",
+                img:"/static/head.png"
+              },
+              {
+                descr:"bbb",
+                img:"/static/aaa.jpg"
+              },
+              {
+                descr:"bbb",
+                img:"/static/head.png"
+              },
+              {
+                descr:"bbb",
+                img:"/static/aaa.jpg"
+              }
+            ]
+          },
+          {
+            albumName:"setTimeout",
+            photo:[
+              {
+                descr:"bbb",
+                img:"/static/head.png"
+              },
+              {
+                descr:"bbb",
+                img:"/static/aaa.jpg"
+              }
+            ]
+          },
+          {
+            albumName:"object",
+            photo:[
+              {
+                descr:"bbb",
+                img:"/static/head.png"
+              },
+              {
+                descr:"bbb",
+                img:"/static/aaa.jpg"
+              }
+            ]
+          }
+        ]
+      }
+    }
   }
 }
 </script>
