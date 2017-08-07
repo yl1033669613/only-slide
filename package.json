@@ -1,7 +1,7 @@
 {
   "name": "my_project",
   "version": "1.0.0",
-  "description": "A Vue.js project",
+  "description": "a vue slide component",
   "author": "zoran <1033669613@qq.com>",
   "private": true,
   "scripts": {

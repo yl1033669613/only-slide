@@ -303,6 +303,7 @@ export default {
     padding: 0 35px;
     line-height: 60px;
     position: relative;
+    box-sizing: border-box;
     .o-preview-wapper{
       position: relative;
       width: 100%;
