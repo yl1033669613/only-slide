@@ -15,11 +15,12 @@ npm run dev
 npm run build
 ```
 ## 使用
-###使用须知  
+
+### 使用须知  
 该项目使用官方的vue-cli脚手架<br>
 js使用了一些es6的特性，ie等浏览器兼容需引用babel-polyfill。<br>
 css 使用了less进行预编译<br>
-###使用方法
+### 使用方法
 在 `src`中找到`components`文件夹将其中的`only_slide.vue`文件复制的你项目的components内，<br>
 在你的项目里引用<br>
 ```javascript
@@ -66,10 +67,9 @@ export default {
 }
 ```
 <br>
-完成之后便可在template 中使用`only-slide`标签了<br>
-```html
+完成之后便可在template 中使用`only-slide`标签了
+<br>
 <only-slide :option="slideOption" class="slide-part" style="margin: 0 auto"></only-slide>
-```
 
 ##效果图<br>
 ![](https://github.com/yl1033669613/vue_slide_component/raw/master/static/111.png)  
