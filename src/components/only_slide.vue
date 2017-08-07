@@ -253,6 +253,8 @@ export default {
     border-radius: 50%;
     transition: all .2s;
     img{
+      vertical-align: middle;
+      display: inline-block;
       width: 32px;
       height: 32px;
     }

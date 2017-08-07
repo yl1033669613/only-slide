@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <only-slide :option="slideOption" class="slide-part"></only-slide>
+    <only-slide :option="slideOption" class="slide-part" style="margin: 0 auto"></only-slide>
     <!-- <hello></hello> -->
   </div>
 </template>
@@ -115,5 +115,8 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+*{
+  box-sizing: border-box;
 }
 </style>
