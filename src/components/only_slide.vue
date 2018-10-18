@@ -1,7 +1,7 @@
 <template>
   <div class="o-sldie-container" :style="{width:option.slideViewWidth + 'px'}">
     <ul class="photo-album-btn clear">
-      <li v-for="(item,index) in sca" :class="{active:caIdx==index?true:false}" @click="cutAlbum(index)">
+      <li v-for="(item,index) in option.slideData" :class="{active:caIdx==index?true:false}" @click="cutAlbum(index)">
         {{item.albumName}}（{{item.photo.length}}）
       </li>
     </ul>
@@ -63,16 +63,25 @@ export default {
   },
   mounted (){
     let self = this;
-    self.sca = self.option.slideData;
-    // 页面初始化获取图片url
-    self.currUrl = self.sca[self.caIdx].photo[self.cpIdx].img;
     // 初始获取预览可移动区域宽度
+    self.currUrl = self.option.slideData[self.caIdx].photo[self.cpIdx].img;
     self.moveablePreviewResetWidth();
+  },
+  watch:{
+    option: {
+      handler(val,oldVal){
+        this.caIdx = 0;
+        this.cpIdx = 0;
+        this.currUrl = val.slideData[this.caIdx].photo[this.cpIdx].img;
+      },
+      deep:true
+    }
   },
   methods:{
     // 切换图片 逻辑
     cutPage (type){
       let self = this;
+      self.sca = self.option.slideData;
       switch (type){
         case "prev":
           if (self.cpIdx == 0) {
@@ -113,6 +122,7 @@ export default {
     // 切换图集 按钮逻辑
     cutAlbum (index){
       let self = this;
+      self.sca = self.option.slideData;
       self.caIdx = index;
       self.cpIdx = 0;
       self.currUrl = self.sca[self.caIdx].photo[self.cpIdx].img;
@@ -140,6 +150,7 @@ export default {
     // 点击预览图片
     clickPreview (index) {
       let self = this;
+      self.sca = self.option.slideData;
       if (self.cpIdx == index) return;
       if (self.cpIdx < index) {
         self.slideAnimate = "slideleft";
@@ -153,6 +164,7 @@ export default {
     // 预览区图集切换
     cutAlbumInPreview(type){
       let self =this;
+      self.sca = self.option.slideData;
       if (type=="prev") {
         self.caIdx --;
         self.cpIdx = 0;
