@@ -2,7 +2,7 @@
 
 > a vue slide plugin
 
-一个vue多图集轮播、包含缩略图的插件
+一个vue多图集轮播、包含缩略图的pc端插件
 
 ## 使用
 
