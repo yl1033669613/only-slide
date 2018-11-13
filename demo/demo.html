@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>test</title>
+	<style>
+		body, html{
+	        padding: 0;
+	        margin: 0;
+	    }
+	</style>
+</head>
+<body>
+	<div id="app">
+        <div style="width: 800px; margin: 50px auto">
+            <only-slide 
+            	:slide-view-width="800" 
+            	:slide-view-height="450"  
+            	:slide-data="slideData"> <!-- slide-view-width（必须）轮播主视图宽度 slide-view-height（必须）轮播主视图高度 slide-data 图集数据,格式请按照例子中的数据格式 -->
+            </only-slide>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+<script src="../dist/only-slide.js"></script>
+<script>
+	Vue.use('onlySlide'); //注册插件
+	
+	var vm = new Vue({ //vue 实例
+		el: '#app',
+		data() {
+			return {
+				slideData: [{
+	                albumName: "图集1", 
+	                photo: [] 
+	            }, {
+	                albumName: "图集2",// 图集相册名 (必填)
+	                photo: [{ //图集内图片数组
+	                    descr: "简介",  //图片单段描述 (可以不填， 但是字段必须有)
+	                    img: './images/aaa.jpg' //图片url (可以不填， 但是字段必须有)
+	                }]
+	            }]
+			}
+		},
+		mounted() {
+			let self = this;
+	        setTimeout(() => {
+	            self.slideData.push({
+	                albumName: "图集3",
+	                photo: []
+	            }, {
+	                albumName: "图集4",
+	                photo: [{
+	                    descr: "这是描述1",
+	                    img: './images/aaa.jpg'
+	                }, {
+	                    descr: "这是描述2",
+	                    img: './images/bbb.jpg'
+	                }, {
+	                    descr: "这是描述3",
+	                    img: './images/aaa.jpg'
+	                }, {
+	                    descr: "",
+	                    img: './images/bbb.jpg'
+	                }]
+	            }, {
+	                albumName: "图集5",
+	                photo: []
+	            }, {
+	                albumName: "图集6",
+	                photo: [{
+	                    descr: "简介",
+	                    img: './images/bbb.jpg'
+	                }, {
+	                    descr: "",
+	                    img: './images/aaa.jpg'
+	                }]
+	            })
+	        }, 2000)
+		}
+	})
+</script>
+</html>
