@@ -36,10 +36,10 @@
 </script>
 ```
 
-具体使用方法请参考[demo.html](https://github.com/yl1033669613/vue_slide_component/raw/master/demo/demo.html)
+具体使用方法请参考[demo.html](https://github.com/yl1033669613/vue_slide_component/blob/master/demo/demo.html)
 
 ## 查看demo
-[demo](https://github.com/yl1033669613/vue_slide_component/raw/master/static/111.png)  
+[demo](https://yl1033669613.github.io/vue_slide_component/demo/demo.html)  
 
 
 
