@@ -43,6 +43,18 @@
 	:slide-data="slideData"> <!-- slide-view-width（必须）轮播主视图宽度 slide-view-height（必须）轮播主视图高度 slide-data 图集数据,格式请按照例子中的数据格式 -->
 </only-slide>
 ```
+```javascript
+[{
+    albumName: "图集1", 
+    photo: [] 
+}, {
+    albumName: "图集2",// 图集相册名 (必填)
+    photo: [{ //图集内图片数组
+        descr: "简介",  //图片单段描述 (可以不填， 但是字段必须有)
+        img: './images/aaa.jpg' //图片url (可以不填， 但是字段必须有)
+    }]
+}]
+```
 
 具体使用方法请参考[demo.html](https://github.com/yl1033669613/vue_slide_component/blob/master/demo/demo.html)
 
