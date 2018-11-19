@@ -43,7 +43,7 @@
 	:slide-data="slideData"> <!-- slide-view-width（必须）轮播主视图宽度 slide-view-height（必须）轮播主视图高度 slide-data 图集数据,格式请按照例子中的数据格式 -->
 </only-slide>
 ```
-具体使用方法请参考[demo.html](https://github.com/yl1033669613/vue_slide_component/blob/master/demo/demo.html)
+具体示例请参考[demo.html](https://github.com/yl1033669613/vue_slide_component/blob/master/demo/demo.html)
 
 #### 传入的数据格式
 
