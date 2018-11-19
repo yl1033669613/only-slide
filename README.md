@@ -1,4 +1,4 @@
-# vue_slide_component
+# only-slide.js
 
 > a vue slide plugin
 
@@ -45,7 +45,7 @@
 ```
 具体示例请参考[demo.html](https://github.com/yl1033669613/vue_slide_component/blob/master/demo/demo.html)
 
-## 传入的数据格式
+####传入的数据格式
 
 ```javascript
 [{
