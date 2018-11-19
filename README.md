@@ -36,6 +36,14 @@
 </script>
 ```
 
+```
+<only-slide 
+	:slide-view-width="800" 
+	:slide-view-height="450"  
+	:slide-data="slideData"> <!-- slide-view-width（必须）轮播主视图宽度 slide-view-height（必须）轮播主视图高度 slide-data 图集数据,格式请按照例子中的数据格式 -->
+</only-slide>
+```
+
 具体使用方法请参考[demo.html](https://github.com/yl1033669613/vue_slide_component/blob/master/demo/demo.html)
 
 ## 查看demo
