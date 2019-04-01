@@ -1,14 +1,14 @@
 {
-  "name": "drag-scale-layer",
-  "description": "A draggable and scalable layer",
+  "name": "only-slide",
+  "description": "A vue slide component",
   "version": "1.0.2",
   "author": "yl",
   "license": "MIT",
   "private": false,
-  "main": "dist/drag-scale-layer.js",
+  "main": "dist/only-slide.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yl1033669613/vue_drag_scale_component"
+    "url": "https://github.com/yl1033669613/only-slide"
   },
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
@@ -34,7 +34,7 @@
     "sass-loader": "^6.0.6",
     "vue-loader": "^13.0.5",
     "vue-template-compiler": "^2.4.4",
-    "webpack": "^3.6.0",
+    "webpack": "^3.6.0",  
     "webpack-dev-server": "^2.9.1"
   }
 }

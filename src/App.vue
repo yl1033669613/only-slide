@@ -46,6 +46,18 @@ export default {
                 }, {
                     descr: "",
                     img: './static/bbb.jpg'
+                },{
+                    descr: "这是描述1",
+                    img: './static/aaa.jpg'
+                }, {
+                    descr: "这是描述2",
+                    img: './static/bbb.jpg'
+                }, {
+                    descr: "这是描述3",
+                    img: './static/aaa.jpg'
+                }, {
+                    descr: "",
+                    img: './static/bbb.jpg'
                 }]
             }, {
                 albumName: "图集5",

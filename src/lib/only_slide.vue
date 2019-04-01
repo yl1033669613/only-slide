@@ -1,7 +1,7 @@
 <template>
     <div class="o-sldie-container" :style="{width:slideViewWidth + 'px'}">
         <ul class="photo-album-btn clear">
-            <li v-for="(item,index) in slideData" :class="{active:caIdx==index?true:false}" @click="cutAlbum(index)">
+            <li v-for="(item,index) in slideData" :key="index" :class="{active:caIdx==index?true:false}" @click="cutAlbum(index)">
                 {{item.albumName}}（{{item.photo.length}}）
             </li>
             <li class="no-album" v-if="slideData.length == 0">暂无图集</li>
@@ -27,7 +27,7 @@
             <div class="o-preview-wapper">
                 <ul :style="{left:previewLeft+'px'}" ref="hidebox">
                     <li class="cut-album-btn" v-if="caIdx == 0 ? false : true" @click="cutAlbumInPreview('prev')">上一图集</li>
-                    <li v-for="(item,index) in slideData[caIdx] && slideData[caIdx].photo ? slideData[caIdx].photo : 0" @click="clickPreview(index)" :style="{opacity: cpIdx == index ? 1 : .4}">
+                    <li v-for="(item,index) in slideData[caIdx] && slideData[caIdx].photo ? slideData[caIdx].photo : 0" :key="index" @click="clickPreview(index)" :style="{opacity: cpIdx == index ? 1 : .4}">
                         <div class="preview-img" :style="{backgroundImage: 'url('+ item.img +')'}"></div>
                     </li>
                     <li class="preview-no-pic" v-if="!slideData[caIdx] || !slideData[caIdx].photo || slideData[caIdx].photo.length == 0">暂无图片</li>
